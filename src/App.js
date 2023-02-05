@@ -1,3 +1,4 @@
+import "./style/main.css";
 import Login from "./Login";
 import Register from "./Register";
 
