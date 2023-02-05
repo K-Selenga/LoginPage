@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Transmission Media Web Developer Exercise
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Please recreate the form shown in `sign-in-form.png`.
 
-## Available Scripts
+![sign in form](./sign-in-form.png)
 
-In the project directory, you can run:
+## About this form
 
-### `npm start`
+- The font used is Roboto, which is available free on Google Fonts.
+- The form comprises:
+  - Two text input fields (Email/Password)
+  - One checkbox field (Remember Me)
+  - One button (Sign In)
+  - Three links below the Sign In button (underlined)
+- Submitting the form should send a request with the user's login details
+  to `localhost:8000/api/login`. This request will obviously fail, because
+  this endpoint doesn't exist. Implementing a server to handle logins is
+  beyond the scope of this exercise! (This is only an interview, after all.)
+- Add validation to this form, to warn the user when they've left a field
+  blank. We leave it to you to determine where and when these message(s) should
+  appear, and how to style them.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Directions
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Use React to build this page. You may bootstrap with Create React App if
+  desired.
+- You may use CSS preprocessors like LESS or SASS.
+- Do NOT use third-party UI libraries like Bootstrap! We want to see how you
+  write your CSS and how you structure components!
+- You may use form validation libraries if desired to handle validation logic.
+- You may use Typescript, but it's not necessary.
+- Submit your code by committing it to a repository on GitHub (or GitLab, or
+  Bitbucket -- whatever you prefer), and sending us a link to that repository.
+  Bonus points if you also deploy and host this page somewhere (e.g. using
+  Heroku or GitHub Pages)! Remember to send us that link as well!
 
-### `npm test`
+## What we are looking for
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Clean, well-structured code, with comments where necessary.
+- The form visually resembles the image we've sent.
+- The form is accessible, uses semantic HTML, and provides good user
+  experience (UX).
+- The form should work and look decent in all evergreen browsers.
+- The login request to nowhere should still use a reasonable method and payload
+  structure choice.
+- Additional features (e.g. validation) you've added fit in well, in terms of
+  visual design and function.
+- Styling accommodates corner cases that'd probably apply in real life
+  (e.g. What if the form was localized and the "Remember Me" label was longer
+  than one line in another language?)
+- Consideration given to developer experience (DX) (e.g. documentation on how
+  to set up your project, good commit messages).
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you for taking the time to complete this exercise for us! :)
