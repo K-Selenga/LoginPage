@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 .container {
   display: block;
   position: relative;
@@ -56,9 +57,17 @@
   transform: rotate(45deg);
 }
 
+.button {
+  background-color: #06874e;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
 body {
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .login {
@@ -72,15 +81,29 @@ body {
 .login__box {
   background-color: #ffffff;
   width: 25rem;
-  height: 28.75rem;
+  height: auto;
   border-top: 2px solid #06874e;
 }
 .login__box--form {
-  padding: 1rem 1.8rem;
+  padding: 1rem 1.8rem 1.8rem;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   align-items: center;
+}
+.login__box--form--links {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.login__box--form--links > p {
+  font-size: 1.25rem;
+}
+.login__box--form--links--forgotPsw, .login__box--form--links--signIn, .login__box--form--links--reSend {
+  text-decoration: underline;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #212529;
 }
 .login__box--form--content {
   display: flex;
@@ -88,7 +111,8 @@ body {
   flex-direction: column;
   align-items: flex-start;
 }
-.login__box--form--content--input {
+.login__box--form--content--input,
+.login__box--form--content .button {
   height: 3rem;
   width: 21.25rem;
   border: 1px solid #ced4da;

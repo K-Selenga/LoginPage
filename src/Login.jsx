@@ -48,12 +48,24 @@ const Login = () => {
                 />
                 <span className="checkmark"></span>
               </label>
-              <button type="submit">Sign In</button>
+              <button className="button" type="submit">
+                Sign In
+              </button>
             </div>
-            <div>
-              <a href="#">Forgot your password?</a>
-              <a href="#">Sign up</a>
-              <a href="#">Continue as guest</a>
+            <div className="login__box--form--links">
+              <a className="login__box--form--links--forgotPsw" href="#">
+                Forgot your password?
+              </a>
+              <p className="container">
+                Don't have an account?
+                <a className="login__box--form--links--signIn" href="#">
+                  {" "}
+                  Sign up
+                </a>
+              </p>
+              <a className="login__box--form--links--reSend" href="#">
+                Resend email confirmation
+              </a>
             </div>
           </form>
         </div>
