@@ -1,15 +1,27 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
-
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(`Email: ${email}`);
-    console.log(`Password: ${password}`);
-    console.log(`Remember Me: ${rememberMe}`);
+    try {
+      const response = await axios.post("http://localhost:8000/api/login", {
+        email: email,
+        password: password,
+        rememberMe: rememberMe,
+      });
+      if (response.data.success) {
+        alert("Login successful");
+      } else {
+        alert(response.data.message);
+      }
+    } catch (error) {
+      console.error("Error: ", error);
+      alert("An error occurred while logging in");
+    }
   };
 
   return (
