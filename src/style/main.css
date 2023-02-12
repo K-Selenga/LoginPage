@@ -1,3 +1,106 @@
+.container {
+  display: block;
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 1.1rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.4rem;
+  width: 1.4rem;
+  background-color: #ffffff;
+  border: 1px solid #212529;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ededed;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #06874e;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
 body {
-  background: red;
+  margin: 0;
+  padding: 0;
+}
+
+.login {
+  background-color: #ededed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login__box {
+  background-color: #ffffff;
+  width: 25rem;
+  height: 28.75rem;
+  border-top: 2px solid #06874e;
+}
+.login__box--form {
+  padding: 1rem 1.8rem;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+}
+.login__box--form--content {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.login__box--form--content--input {
+  height: 3rem;
+  width: 21.25rem;
+  border: 1px solid #ced4da;
+  margin-bottom: 1.5rem;
+}
+.login__box--form--content--title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 0;
+}
+.login__box--form--content--title2 {
+  font-size: 1.25rem;
+  padding: 0;
+  margin: 0;
 }/*# sourceMappingURL=main.css.map */
